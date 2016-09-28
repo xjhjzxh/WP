@@ -16,7 +16,7 @@ Template Name:worklog
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		
+		<div></div>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
