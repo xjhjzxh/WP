@@ -71,7 +71,7 @@ get_header(); ?>
 		<div class="mainBox">
 			<div class="newItemBox itembox" ondrop="drop(event)" ondragover="allowDrop(event)">
 				<div class="item" draggable="true" ondragstart="drag(event)">
-					滚动条在IE下滚动时闪跳的问题1
+					滚动条在IE下滚动时闪跳的问题12332
 				</div>
 				<div class="item" draggable="true" ondragstart="drag(event)">
 					滚动条在IE下滚动时闪跳的问题2
