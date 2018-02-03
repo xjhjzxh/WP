@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WORK ITEM</title>
+	<meta charset="utf-8" />
+	<script src="../js/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <button id="load">load</button>
+    <button id="save">save</button>
+	<textarea id="textarea"></textarea>
+	<script type="text/javascript">
+		$(function(){
+			var $textarea = $("#textarea");
+			$("#load").on("click",function(){
+				$.ajax({
+					url:"/wp-includes/workitem/workitem.php",
+					type:"post",
+					data:{
+						action:"load",
+						str:""
+					},
+					success:function(data){
+						console.log(data);
+						$textarea.html(data);
+					}
+				})
+			});
+			$("#save").on("click",function(){
+				$.ajax({
+					url:"workitem.php",
+					type:"post",
+					data:{
+						action:"save",
+						str: $textarea.val()
+					},
+					success:function(data){
+						console.log(data);
+					}
+				})
+			});
+		})
+	</script>
+</body>
+</html>
